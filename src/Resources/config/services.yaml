@@ -5,7 +5,7 @@ services:
 
   PhpGuild\RhapsodySecurityBundle\:
     resource: '../../*'
-    exclude: '../../{Composer,DependencyInjection,RhapsodySecurityBundle.php}'
+    exclude: '../../{DependencyInjection,RhapsodySecurityBundle.php}'
 
   PhpGuild\RhapsodySecurityBundle\Action\:
     resource: ../../Action
