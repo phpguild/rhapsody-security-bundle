@@ -1,0 +1,14 @@
+admin_auth_login:
+  path: /auth
+  methods: [ GET ]
+  controller: PhpGuild\RhapsodySecurityBundle\Action\Auth\LoginAction::__invoke
+
+admin_auth_login_check:
+  path: /auth/login_check
+  methods: [ POST ]
+  controller: PhpGuild\RhapsodySecurityBundle\Action\Auth\LoginCheckAction::__invoke
+
+admin_auth_logout:
+  path: /auth/logout
+  methods: [ GET ]
+  controller: PhpGuild\RhapsodySecurityBundle\Action\Auth\LogoutAction::__invoke

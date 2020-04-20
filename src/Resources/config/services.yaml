@@ -1,0 +1,16 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  PhpGuild\RhapsodySecurityBundle\:
+    resource: '../../*'
+    exclude: '../../{Composer,DependencyInjection,RhapsodySecurityBundle.php}'
+
+  PhpGuild\RhapsodySecurityBundle\Action\:
+    resource: ../../Action
+    tags: [ controller.service_arguments ]
+
+  PhpGuild\RhapsodySecurityBundle\EventListener\UserSecurityListener:
+    tags:
+      - { name: doctrine.event_listener, event: prePersist }
