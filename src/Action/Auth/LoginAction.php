@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace PhpGuild\RhapsodySecurityBundle\Action\Auth;
 
+use PhpGuild\ResourceBundle\Configuration\ConfigurationException;
 use PhpGuild\RhapsodyBundle\Provider\RouterProvider;
 use PhpGuild\RhapsodyBundle\Provider\ThemeProvider;
-use PhpGuild\RhapsodyBundle\Provider\ThemeProviderException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -42,7 +42,7 @@ class LoginAction extends AbstractController
      * @param Request             $request
      *
      * @return Response
-     * @throws ThemeProviderException
+     * @throws ConfigurationException
      */
     public function __invoke(AuthenticationUtils $authenticationUtils, Request $request): Response
     {
